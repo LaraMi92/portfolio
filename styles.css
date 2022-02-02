@@ -1,0 +1,168 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F8F8FF;
+    position: relative;
+    font-family: 'Abel', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: right;
+    align-items: space-around;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    min-height: 5vh;
+    z-index: 100;
+}
+
+.header-link {
+    padding: 1rem;
+    color: #0000FF;
+    font-size: 2em;
+}
+
+.header-link:hover,
+.section-content--about-text > a,
+.section-content--work-1--title:hover,
+.section-content--work-2--title:hover {
+    color: #72c1c4;
+}
+
+.section-content {
+    width: 90%;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-content--about-picture,
+.section-content--work-1--content-picture,
+.section-content--work-2--content-picture {
+    padding: 1rem;
+}
+
+.section-content--about-picture > img,
+.section-content--work-1--content-picture > a > img,
+.section-content--work-2--content-picture > a > img {
+   max-width: 60vw;
+   max-height: 60vh;
+   object-fit: cover;
+   border-radius: 50%;
+   border: 2px solid #0000FF;
+}
+
+.section-content--about-picture > img:hover,
+.section-content--work-1--content-picture > a >img:hover,
+.section-content--work-2--content-picture > a > img:hover {
+    transition: filter .5s ease-in-out;
+    filter: grayscale(79%) brightness(78%);
+    -webkit-filter: grayscale(79%) brightness(78%);
+    -moz-filter: grayscale(79%) brightness(78%);
+}
+
+.section-content--about-text,
+.section-content--work-1--content-text,
+.section-content--work-2--content-text {
+    color: #0000FF;
+    font-size: 1.5em;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.section-content--work-1,
+.section-content--work-2 {
+    width: 90%;
+    margin: auto;
+}
+
+.section-content--work-1--content,
+.section-content--work-2--content {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-content--work-1--title,
+.section-content--work-2--title {
+    color: #0000FF;
+    padding: 1rem 0 1rem 0;
+    font-size: 2em;
+}
+
+/**ANIMATIONS */
+
+.tracking-in-contract {
+	-webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+  
+  @-webkit-keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  
+  
+  
+
+/**MEDIA QUERIES*/
+@media screen and (max-width: 480px) {
+    .section-content {
+      flex-flow: column wrap;
+      text-align: center;
+    }
+    .section-content--about-text,
+    .section-content--work-1--content-text,
+    .section-content--work-2--content-text {
+    font-size: 1em;
+    }
+    .section-content--work-1--content-picture > a > img,
+    .section-content--work-2--content-picture > a > img {
+        max-width: 50vw;
+        max-height: 50vh;
+    }
+    
+  }
+

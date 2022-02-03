@@ -106,6 +106,8 @@ a {
     font-size: 2em;
 }
 
+
+
 /**ANIMATIONS */
 
   .tracking-in-contract {
@@ -163,6 +165,9 @@ a {
     .section-content--work-1--title,
     .section-content--work-2--title {
       color:#72c1c4;
+    }
+    .order {
+      order: 2;
     }
   }
 

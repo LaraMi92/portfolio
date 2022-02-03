@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function(){
         const workTwoText = document.querySelector('.section-content--work-2--content-text');
         const workOneDiv = document.querySelector('.section-content--work-1--content');
         const workTwoDiv = document.querySelector('.section-content--work-2--content');
-        const workThreeDiv = document.querySelector('.section-content--work-2--content .work-4');
+        const workThreeDiv = document.querySelector('.work-3');
         const workThreeText = document.querySelector('.section-content--work-2--content-text:nth-child(2)');
         const workFourText = document.querySelector('.section-content--work-2--content .work-4:first-child');
     
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function(){
             workThreeText.classList.remove('hidden');
             workThreeText.classList.add('tracking-in-contract');
         }
-        if(workThreeDiv.getBoundingClientRect().top <= 0){
+        if(workThreeDiv.getBoundingClientRect().bottom <= 0){
             workFourText.classList.remove('hidden');
             workFourText.classList.add('tracking-in-contract');
         }

@@ -156,7 +156,7 @@ a {
     .section-content--work-1--content,
     .section-content--work-2--content {
       margin: 1rem auto 1rem auto;
-      min-height: 95vh;
+      min-height: /* 95vh */70vh;
       flex-flow: column wrap;
       justify-content: center;
       align-items: center;

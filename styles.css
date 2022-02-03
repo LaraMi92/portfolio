@@ -108,34 +108,32 @@ a {
 
 /**ANIMATIONS */
 
-.tracking-in-contract {
-	-webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-  
-  @-webkit-keyframes tracking-in-contract {
+  .tracking-in-contract {
+    -webkit-animation: text-focus-in .3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: text-focus-in .3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  }
+
+  @-webkit-keyframes text-focus-in {
     0% {
-      letter-spacing: 1em;
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
       opacity: 0;
     }
-    40% {
-      opacity: 0.6;
-    }
     100% {
-      letter-spacing: normal;
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
       opacity: 1;
     }
   }
-  @keyframes tracking-in-contract {
+  @keyframes text-focus-in {
     0% {
-      letter-spacing: 1em;
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
       opacity: 0;
     }
-    40% {
-      opacity: 0.6;
-    }
     100% {
-      letter-spacing: normal;
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
       opacity: 1;
     }
   }
@@ -152,21 +150,19 @@ a {
       flex-flow: column wrap;
       text-align: center;
     }
-    .section-content--about-text,
-    .section-content--work-1--content-text,
-    .section-content--work-2--content-text {
-    font-size: 1em;
-    }
-    .section-content--work-1--content-picture > a > img,
-    .section-content--work-2--content-picture > a > img {
-        max-width: 50vw;
-        max-height: 50vh;
-    }
+
     .section-content--work-1--content,
     .section-content--work-2--content {
       margin: 2rem auto 2rem auto;
       min-height: 95vh;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
-    
+    .section-content--work-1--title,
+    .section-content--work-2--title {
+      color:#72c1c4;
+    }
   }
 

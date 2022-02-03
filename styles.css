@@ -162,6 +162,13 @@ a {
       align-items: center;
       text-align: center;
     }
+
+    .section-content--about-picture > img,
+    .section-content--work-1--content-picture > a > img,
+    .section-content--work-2--content-picture > a > img {
+   max-width: 70vw;
+   max-height: 70vh;
+}
     .section-content--work-1--title,
     .section-content--work-2--title {
       color:#72c1c4;

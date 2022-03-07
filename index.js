@@ -13,12 +13,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const work3Div = document.querySelector('.work-3');
         const work4Div = document.querySelector('.work-4');
         const work5Div = document.querySelector('.work-5');
+        const work6Div = document.querySelector('.work-6');
+        const work6Text = document.querySelector('.work-6 .section-content--work-2--content-text')
         const work5Text = document.querySelector('.work-5 .section-content--work-2--content-text');
         const work3Text = document.querySelector('.section-content--work-2--content-text:nth-child(2)');
         const work4Text = document.querySelector('.section-content--work-2--content .work-4:first-child');
 
-        const divs = [work1Div, work2Div, work3Div, work4Div, work5Div];
-        const texts = [work1Text, work2Text, work3Text, work4Text, work5Text];
+        const divs = [work1Div, work2Div, work3Div, work4Div, work5Div, work6Div];
+        const texts = [work1Text, work2Text, work3Text, work4Text, work5Text, work6Text];
 
         //Scroll to bottom
         if (scrollTop > 0 && lastScrollTop <= scrollTop) {
@@ -27,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 work1Text.classList.remove('hidden');
                 work1Text.classList.add('tracking-in-contract');
             }
-            for (let i = 0; i < 4; i++) {
+            for (let i = 0; i < 5; i++) {
                 if (divs[i].getBoundingClientRect().bottom <= 0) {
                     texts[i + 1].classList.remove('hidden');
                     texts[i + 1].classList.add('tracking-in-contract');
@@ -39,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
             work1Text.classList.add('hidden');
             work1Text.classList.remove('tracking-in-contract');
             //Scroll to top
-            for (let i = 0; i < 4; i++) {
+            for (let i = 0; i < 5; i++) {
 
                 texts[i + 1].classList.add('hidden');
                 texts[i + 1].classList.remove('tracking-in-contract');
